@@ -1,0 +1,26 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+  <title>Getting Started: Serving Web Content</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+<body>
+<p th:text="'Hello, ' + ${name} + '!'" />
+
+<table>
+  <tr>
+    <th>DATE</th>
+    <th>TUTOR</th>
+    <th>TUTEE</th>
+    <th>CONTENT</th>
+  </tr>
+  <tr th:each="homework : ${homeworks}">
+    <td th:text="${homework.date}">Onions</td>
+    <td th:text="${homework.tutor}">Onions</td>
+    <td th:text="${homework.tutee}">2.41</td>
+    <td th:text="${homework.content}">yes</td>
+  </tr>
+</table>
+
+</body>
+</html>

@@ -10,11 +10,10 @@ import org.springframework.context.annotation.Bean;
 @SpringBootApplication
 public class DrpApplication {
 
-	private static final Logger log = LoggerFactory.getLogger(DrpApplication.class);
+  private static final Logger log = LoggerFactory.getLogger(DrpApplication.class);
 
-	public static void main(String[] args) {
-		SpringApplication.run(DrpApplication.class);
-	}
-
+  public static void main(String[] args) {
+    SpringApplication.run(DrpApplication.class);
+  }
 
 }
