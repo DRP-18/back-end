@@ -3,23 +3,29 @@
 <head>
   <title>Homework</title>
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" />
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 </head>
 <body>
-<p th:text="'Hello, ' + ${name} + '!'" />
+<h1 th:text="'Hello, ' + ${name} + '!'" />
 
-<table>
+<table class="table">
+  <thead>
   <tr>
-    <th>DATE</th>
-    <th>TUTOR</th>
-    <th>TUTEE</th>
-    <th>CONTENT</th>
+    <th scope="col">DATE</th>
+    <th scope="col">TUTOR</th>
+    <th scope="col">TUTEE</th>
+    <th scope="col">CONTENT</th>
   </tr>
+  </thead>
+  <tbody>
   <tr th:each="homework : ${homeworks}">
     <td th:text="${homework.date}">Onions</td>
     <td th:text="${homework.tutor}">Onions</td>
     <td th:text="${homework.tutee}">2.41</td>
     <td th:text="${homework.content}">yes</td>
   </tr>
+  </tbody>
 </table>
 
 </body>
