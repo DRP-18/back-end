@@ -21,6 +21,7 @@ public class DrpApplication {
   @Bean
   public CommandLineRunner demo(HomeworkRepository repository) {
     return (args) -> {
+      repository.deleteAll();
       // save a few customers
       repository.save(new Homework("Jayme", "Mika", "Maths question 1", "31/5/2021"));
       repository.save(new Homework("Jayme", "Mika", "Maths question 2", "31/5/2021"));
